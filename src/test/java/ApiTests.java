@@ -44,6 +44,7 @@ public class ApiTests {
     }
 
     @Test
+    @DisplayName("Поиск несуществующего питомца")
     public void petNotFoundTestBdd() {
         given().when()
                 .get(baseURI + "pet/{petId}", unexistingPetId)
